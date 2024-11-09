@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhy3kxb428dim"]
+[gd_scene load_steps=13 format=3 uid="uid://bhy3kxb428dim"]
 
 [ext_resource type="Script" path="res://Scripts/Mechanics/Radio/radio.gd" id="1_4mfwd"]
 [ext_resource type="Script" path="res://Scripts/PlayerController/player_controller.gd" id="1_08lnn"]
@@ -15,6 +15,9 @@ size = Vector3(25, 0.482422, 25)
 [sub_resource type="BoxMesh" id="BoxMesh_xpe2v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yfxnr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_khsmx"]
+size = Vector3(2, 1.021, 2)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dugho"]
 radius = 0.3
@@ -47,31 +50,45 @@ mesh = SubResource("BoxMesh_xpe2v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
 shape = SubResource("BoxShape3D_yfxnr")
 
-[node name="Booth" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-0.617475, 0, -0.78659, 0, 1, 0, 0.78659, 0, -0.617475, -0.127498, -0.0175781, -6.45857)
-mesh = ExtResource("1_c2lsc")
-skeleton = NodePath("../..")
-
-[node name="Stool" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0958147, -0.0175781, -6.47659)
-mesh = ExtResource("2_ohnw3")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Scene"]
 transform = Transform3D(0.936495, 0.146455, -0.318635, 0, 0.908618, 0.417629, 0.350681, -0.391108, 0.850916, 0, 2.97753, 0)
 shadow_enabled = true
+
+[node name="TimeAnomaly" type="Node3D" parent="Scene"]
+
+[node name="TimeChanger" type="Node" parent="Scene/TimeAnomaly" node_paths=PackedStringArray("radio", "default_scene", "alternative_scene")]
+script = ExtResource("2_qdcim")
+radio = NodePath("../../../Scripts/Radio")
+default_scene = NodePath("../Def")
+alternative_scene = NodePath("../Alt")
+
+[node name="Trigger" type="Area3D" parent="Scene/TimeAnomaly"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.40252)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/TimeAnomaly/Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.193726, 0.532898, -0.0078125)
+shape = SubResource("BoxShape3D_khsmx")
+
+[node name="Def" type="Node3D" parent="Scene/TimeAnomaly"]
+
+[node name="Booth" type="MeshInstance3D" parent="Scene/TimeAnomaly/Def"]
+transform = Transform3D(-0.617475, 0, -0.78659, 0, 1, 0, 0.78659, 0, -0.617475, -0.127498, -0.0175781, -6.45857)
+mesh = ExtResource("1_c2lsc")
+skeleton = NodePath("../../../..")
+
+[node name="Alt" type="Node3D" parent="Scene/TimeAnomaly"]
+
+[node name="Stool" type="MeshInstance3D" parent="Scene/TimeAnomaly/Alt"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0958147, -0.0175781, -6.47659)
+mesh = ExtResource("2_ohnw3")
+skeleton = NodePath("../../..")
 
 [node name="Scripts" type="Node" parent="."]
 
 [node name="Radio" type="Node" parent="Scripts"]
 script = ExtResource("1_4mfwd")
 
-[node name="TimeChanger" type="Node" parent="Scripts" node_paths=PackedStringArray("radio", "default_scene", "alternative_scene")]
-script = ExtResource("2_qdcim")
-radio = NodePath("../Radio")
-default_scene = NodePath("../../Scene/Booth")
-alternative_scene = NodePath("../../Scene/Stool")
-
-[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast")]
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast") groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, -1.42841)
 script = ExtResource("1_08lnn")
 head = NodePath("Head")
@@ -97,3 +114,6 @@ shape = SubResource("CapsuleShape3D_nmsrj")
 [node name="HeadRaycast" type="RayCast3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01379, 0)
 target_position = Vector3(0, 0.645, 0)
+
+[connection signal="body_entered" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="enter"]
+[connection signal="body_exited" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="exit"]
