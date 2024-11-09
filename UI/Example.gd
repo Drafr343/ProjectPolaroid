@@ -13,5 +13,5 @@ func _ready():
 	# new_score has not been set
 	print(new_score) # prints null
 
+#puto el adalberto traga pito come winie de prro
 # Que onda pa
-
