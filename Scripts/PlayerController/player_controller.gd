@@ -38,11 +38,11 @@ func _physics_process(delta):
 	#Crouching
 	if Input.is_action_pressed("crouch"):
 		currentSpeed = crouchingSpeed
-		head.position.y = lerp(head.position.y, 0.2, delta*8)
+		head.position.y = lerp(head.position.y, 1.0, delta*8)
 		standingCollision.disabled = true
 		crouchingCollision.disabled = false
 	elif !head_raycast.is_colliding():
-		head.position.y = lerp(head.position.y, 0.7, delta*8)
+		head.position.y = lerp(head.position.y, 1.65, delta*8)
 		standingCollision.disabled = false
 		crouchingCollision.disabled = true
 		

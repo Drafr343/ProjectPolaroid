@@ -34,7 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
 shape = SubResource("BoxShape3D_an2cb")
 
 [node name="Cube" type="StaticBody3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.322269, -7.43273)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499045, -7.43273)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Cube"]
 mesh = SubResource("BoxMesh_xpe2v")
@@ -48,7 +48,7 @@ transform = Transform3D(0.936495, 0.146455, -0.318635, 0, 0.908618, 0.417629, 0.
 shadow_enabled = true
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, -6.19913)
 script = ExtResource("1_08lnn")
 head = NodePath("Head")
 standingCollision = NodePath("StandingCollision")
