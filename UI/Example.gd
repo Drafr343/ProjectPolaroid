@@ -12,4 +12,6 @@ func _ready():
 	add_to_score(1)
 	# new_score has not been set
 	print(new_score) # prints null
+	
 #puto el adalberto traga pito come winie de prro
+# Que onda pa

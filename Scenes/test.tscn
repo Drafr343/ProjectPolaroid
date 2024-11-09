@@ -1,9 +1,75 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhy3kxb428dim"]
+[gd_scene load_steps=8 format=3 uid="uid://bhy3kxb428dim"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_8wjyt"]
+[ext_resource type="Script" path="res://Scripts/PlayerController/player_controller.gd" id="1_08lnn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mhwkm"]
 size = Vector2(25, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_an2cb"]
+size = Vector3(25, 0.482422, 25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xpe2v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfxnr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dugho"]
+radius = 0.3
+height = 1.65
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nmsrj"]
+radius = 0.3
+height = 1.0
 
 [node name="Test" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_8wjyt")
+[node name="Scene" type="Node" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="Scene"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Floor"]
+mesh = SubResource("PlaneMesh_mhwkm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
+shape = SubResource("BoxShape3D_an2cb")
+
+[node name="Cube" type="StaticBody3D" parent="Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.322269, -7.43273)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Cube"]
+mesh = SubResource("BoxMesh_xpe2v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Cube"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
+shape = SubResource("BoxShape3D_yfxnr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Scene"]
+transform = Transform3D(0.936495, 0.146455, -0.318635, 0, 0.908618, 0.417629, 0.350681, -0.391108, 0.850916, 0, 2.97753, 0)
+shadow_enabled = true
+
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, 0)
+script = ExtResource("1_08lnn")
+head = NodePath("Head")
+standingCollision = NodePath("StandingCollision")
+crouchingCollision = NodePath("CrouchingCollision")
+head_raycast = NodePath("HeadRaycast")
+mouseSens = 0.1
+
+[node name="Head" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37555, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0826128)
+
+[node name="StandingCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.828492, 0)
+shape = SubResource("CapsuleShape3D_dugho")
+
+[node name="CrouchingCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.505402, 0)
+shape = SubResource("CapsuleShape3D_nmsrj")
+
+[node name="HeadRaycast" type="RayCast3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01379, 0)
+target_position = Vector3(0, 0.645, 0)
