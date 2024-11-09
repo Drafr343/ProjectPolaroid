@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhy3kxb428dim"]
+[gd_scene load_steps=12 format=3 uid="uid://bhy3kxb428dim"]
 
 [ext_resource type="Script" path="res://Scripts/Mechanics/Radio/radio.gd" id="1_4mfwd"]
 [ext_resource type="Script" path="res://Scripts/PlayerController/player_controller.gd" id="1_08lnn"]
+[ext_resource type="ArrayMesh" uid="uid://2n0igokp8uv7" path="res://Assets/Models/Diner/Props/Booth.obj" id="1_c2lsc"]
+[ext_resource type="ArrayMesh" uid="uid://cgfukggc3lhu3" path="res://Assets/Models/Diner/Props/Stool.obj" id="2_ohnw3"]
 [ext_resource type="Script" path="res://Scripts/Mechanics/Radio/time_changer.gd" id="2_qdcim"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_mhwkm"]
@@ -36,7 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
 shape = SubResource("BoxShape3D_an2cb")
 
 [node name="Cube" type="StaticBody3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499045, -7.43273)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499045, -8.56488)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Cube"]
 mesh = SubResource("BoxMesh_xpe2v")
@@ -44,6 +46,15 @@ mesh = SubResource("BoxMesh_xpe2v")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Cube"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
 shape = SubResource("BoxShape3D_yfxnr")
+
+[node name="Booth" type="MeshInstance3D" parent="Scene"]
+transform = Transform3D(-0.617475, 0, -0.78659, 0, 1, 0, 0.78659, 0, -0.617475, -0.127498, -0.0175781, -6.45857)
+mesh = ExtResource("1_c2lsc")
+skeleton = NodePath("../..")
+
+[node name="Stool" type="MeshInstance3D" parent="Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0958147, -0.0175781, -6.47659)
+mesh = ExtResource("2_ohnw3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Scene"]
 transform = Transform3D(0.936495, 0.146455, -0.318635, 0, 0.908618, 0.417629, 0.350681, -0.391108, 0.850916, 0, 2.97753, 0)
@@ -54,12 +65,14 @@ shadow_enabled = true
 [node name="Radio" type="Node" parent="Scripts"]
 script = ExtResource("1_4mfwd")
 
-[node name="TimeChanger" type="Node" parent="Scripts" node_paths=PackedStringArray("radio")]
+[node name="TimeChanger" type="Node" parent="Scripts" node_paths=PackedStringArray("radio", "default_scene", "alternative_scene")]
 script = ExtResource("2_qdcim")
 radio = NodePath("../Radio")
+default_scene = NodePath("../../Scene/Booth")
+alternative_scene = NodePath("../../Scene/Stool")
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, -6.19913)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, -1.42841)
 script = ExtResource("1_08lnn")
 head = NodePath("Head")
 standingCollision = NodePath("StandingCollision")
