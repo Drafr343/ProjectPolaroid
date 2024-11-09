@@ -14,3 +14,4 @@ func _ready():
 	print(new_score) # prints null
 
 # Que onda pa
+
