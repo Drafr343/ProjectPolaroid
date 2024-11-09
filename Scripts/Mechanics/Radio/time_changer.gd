@@ -6,6 +6,7 @@ extends Node
 @export var alt_freq = 1023
 @export var def_freq = 1058
 const max_timer = 1.5
+var onTrigger = false
 var timer = 0
 var alternative_time = false
 
@@ -16,7 +17,13 @@ func _ready() -> void:
 
 
 func _physics_process(delta):
-	print("Current freq: %.2f\nTimer: %.2f\nAlt time: %s" % [radio.freq, timer, alternative_time])
+	if onTrigger:
+		print("Current freq: %.2f\nTimer: %.2f\nAlt time: %s" % [radio.freq, timer, alternative_time])
+		time_anomaly(delta)
+	else:
+		timer = 0
+
+func time_anomaly(delta):
 	#Manejo del timer, si se mantiene la frecuencia el timer incrementa, caso contrario decrese
 	if alternative_time:
 		if radio.freq > def_freq - 1.5 and radio.freq < def_freq + 1.5:
@@ -49,3 +56,12 @@ func _physics_process(delta):
 		default_scene.set_process(true)
 		default_scene.set_physics_process(true)
 		default_scene.set_visible(true)
+
+func enter(body: Node):
+	if body.is_in_group("player"):
+		onTrigger = true
+		print("On Trigger")
+func exit(body: Node):
+	if body.is_in_group("player"):
+		onTrigger = false
+		print("Exited Trigger")
