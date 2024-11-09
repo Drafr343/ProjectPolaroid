@@ -7,6 +7,7 @@ var searching = false
 @export var multiplier = 25
 @export_category("Audio")
 @export var searchingFreq: AudioStreamPlayer2D
+@export var soundEffect: Array[AudioStream]
 
 func _ready() -> void:
 	freq = 1100
@@ -24,7 +25,10 @@ func _physics_process(delta):
 		searching = false
 	
 	if searching:
-		if !searchingFreq.playing: searchingFreq.play()
+		if !searchingFreq.playing: 
+			var rand_index:int = randi() % soundEffect.size()
+			searchingFreq.stream = soundEffect[rand_index]
+			searchingFreq.play()
 	else:
 		searchingFreq.stop()
 	

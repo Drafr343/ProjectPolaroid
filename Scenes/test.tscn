@@ -1,12 +1,16 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhy3kxb428dim"]
+[gd_scene load_steps=19 format=3 uid="uid://bhy3kxb428dim"]
 
 [ext_resource type="Script" path="res://Scripts/Mechanics/Radio/radio.gd" id="1_4mfwd"]
 [ext_resource type="Script" path="res://Scripts/PlayerController/player_controller.gd" id="1_08lnn"]
 [ext_resource type="ArrayMesh" uid="uid://2n0igokp8uv7" path="res://Assets/Models/Diner/Props/Booth.obj" id="1_c2lsc"]
+[ext_resource type="AudioStream" uid="uid://ck5c5e3trfb8y" path="res://Sound/Sound Effects/Radio/Freq_reached.ogg" id="2_h2atc"]
 [ext_resource type="ArrayMesh" uid="uid://cgfukggc3lhu3" path="res://Assets/Models/Diner/Props/Stool.obj" id="2_ohnw3"]
 [ext_resource type="Script" path="res://Scripts/Mechanics/Radio/time_changer.gd" id="2_qdcim"]
+[ext_resource type="AudioStream" uid="uid://b6nktn0sknrb2" path="res://Sound/Sound Effects/Radio/Reaching_Freq.ogg" id="2_uj8q8"]
 [ext_resource type="AudioStream" uid="uid://cj4nfl85rrr3f" path="res://Sound/Sound Effects/Radio/radio_freq.ogg" id="4_r2unn"]
 [ext_resource type="AudioStream" uid="uid://xh8hqp0e661c" path="res://Sound/Sound Effects/Radio/radio_noise.ogg" id="4_yoa47"]
+[ext_resource type="AudioStream" uid="uid://5ubqtw2tjucq" path="res://Sound/Sound Effects/Radio/radio_noise_2.ogg" id="7_xxsq3"]
+[ext_resource type="AudioStream" uid="uid://31qd8xo1kixc" path="res://Sound/Sound Effects/Radio/radio_noise_3.ogg" id="8_vfcgv"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_mhwkm"]
 size = Vector2(25, 25)
@@ -59,11 +63,14 @@ shadow_enabled = true
 [node name="TimeAnomaly" type="Node3D" parent="Scene"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.09465)
 
-[node name="TimeChanger" type="Node" parent="Scene/TimeAnomaly" node_paths=PackedStringArray("radio", "default_scene", "alternative_scene")]
+[node name="TimeChanger" type="Node" parent="Scene/TimeAnomaly" node_paths=PackedStringArray("radio", "default_scene", "alternative_scene", "sound_player")]
 script = ExtResource("2_qdcim")
 radio = NodePath("../../../Scripts/Radio")
 default_scene = NodePath("../Def")
 alternative_scene = NodePath("../Alt")
+sound_player = NodePath("../../../Player/ChangingReallity")
+sound_reaching = ExtResource("2_uj8q8")
+sound_reached = ExtResource("2_h2atc")
 
 [node name="Trigger" type="Area3D" parent="Scene/TimeAnomaly"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12857)
@@ -90,7 +97,7 @@ skeleton = NodePath("../../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.457647, 0)
 stream = ExtResource("4_yoa47")
 attenuation_model = 2
-volume_db = -11.0
+volume_db = -15.0
 unit_size = 1.95
 autoplay = true
 parameters/looping = true
@@ -100,6 +107,7 @@ parameters/looping = true
 [node name="Radio" type="Node" parent="Scripts" node_paths=PackedStringArray("searchingFreq")]
 script = ExtResource("1_4mfwd")
 searchingFreq = NodePath("../../Player/RadioSearching")
+soundEffect = Array[AudioStream]([ExtResource("7_xxsq3"), ExtResource("8_vfcgv")])
 
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast") groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, -1.42841)
@@ -131,7 +139,12 @@ target_position = Vector3(0, 0.645, 0)
 [node name="RadioSearching" type="AudioStreamPlayer2D" parent="Player"]
 stream = ExtResource("4_r2unn")
 volume_db = 5.0
+bus = &"VFX"
 parameters/looping = true
+
+[node name="ChangingReallity" type="AudioStreamPlayer2D" parent="Player"]
+volume_db = 5.0
+bus = &"VFX"
 
 [connection signal="body_entered" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="enter"]
 [connection signal="body_exited" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="exit"]
