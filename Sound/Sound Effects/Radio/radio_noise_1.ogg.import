@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c1xdgpdrrmnc7"
+path="res://.godot/imported/radio_noise_1.ogg-828eef1be791548c0b5df5e375714e72.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound/Sound Effects/Radio/radio_noise_1.ogg"
+dest_files=["res://.godot/imported/radio_noise_1.ogg-828eef1be791548c0b5df5e375714e72.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

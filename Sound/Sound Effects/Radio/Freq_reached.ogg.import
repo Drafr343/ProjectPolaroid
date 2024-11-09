@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ck5c5e3trfb8y"
+path="res://.godot/imported/Freq_reached.ogg-9017f1a9bfb78d65608a8b4c6da07623.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound/Sound Effects/Radio/Freq_reached.ogg"
+dest_files=["res://.godot/imported/Freq_reached.ogg-9017f1a9bfb78d65608a8b4c6da07623.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
