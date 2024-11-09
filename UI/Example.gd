@@ -15,4 +15,3 @@ func _ready():
 	
 #puto el adalberto traga pito come winie de prro
 # Que onda pa
-
