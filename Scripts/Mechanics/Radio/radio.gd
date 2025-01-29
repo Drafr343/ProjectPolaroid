@@ -16,10 +16,10 @@ func _ready() -> void:
 func _physics_process(delta):
 	# Changes radio freq with input
 	if Input.is_action_pressed("radio_right") and freq < max:
-		freq += 1 * (delta * multiplier)
+		freq += Input.get_action_strength("radio_right") * (delta * multiplier)
 		searching = true
 	elif Input.is_action_pressed("radio_left") and freq > min:
-		freq -= 1 * (delta * multiplier)
+		freq -= Input.get_action_strength("radio_left") * (delta * multiplier)
 		searching = true
 	else:
 		searching = false

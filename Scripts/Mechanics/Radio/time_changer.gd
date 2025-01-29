@@ -47,8 +47,17 @@ func time_anomaly(delta):
 		alternative_time = !alternative_time
 		sound_player.stream = sound_reached
 		sound_player.play()
-		timer = 0
+		timer -= 3 * delta
+	if timer <= 0:
+		sound_player.stop()
+		Input.start_joy_vibration(0,0,0,0)
 	
+	if timer > 0.15:
+		Input.start_joy_vibration(0,0.2,0,0)
+	if timer > 0.4:
+		Input.start_joy_vibration(0,0.5,0.2,0)
+	if timer > 0.7:
+		Input.start_joy_vibration(0,1,0.5,0)
 	#Cambio de escenografia
 	if alternative_time:
 		alternative_scene.set_process(true)

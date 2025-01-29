@@ -1,0 +1,154 @@
+[gd_scene load_steps=20 format=3 uid="uid://bhy3kxb428dim"]
+
+[ext_resource type="Script" path="res://Scripts/Mechanics/Radio/radio.gd" id="1_4mfwd"]
+[ext_resource type="Script" path="res://Scripts/PlayerController/player_controller.gd" id="1_08lnn"]
+[ext_resource type="ArrayMesh" uid="uid://2n0igokp8uv7" path="res://Assets/Models/Diner/Props/Booth.obj" id="1_c2lsc"]
+[ext_resource type="AudioStream" uid="uid://ck5c5e3trfb8y" path="res://Sound/Sound Effects/Radio/Freq_reached.ogg" id="2_h2atc"]
+[ext_resource type="ArrayMesh" uid="uid://cgfukggc3lhu3" path="res://Assets/Models/Diner/Props/Stool.obj" id="2_ohnw3"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/Radio/time_changer.gd" id="2_qdcim"]
+[ext_resource type="AudioStream" uid="uid://b6nktn0sknrb2" path="res://Sound/Sound Effects/Radio/Reaching_Freq.ogg" id="2_uj8q8"]
+[ext_resource type="AudioStream" uid="uid://cj4nfl85rrr3f" path="res://Sound/Sound Effects/Radio/radio_freq.ogg" id="4_r2unn"]
+[ext_resource type="AudioStream" uid="uid://xh8hqp0e661c" path="res://Sound/Sound Effects/Radio/radio_noise.ogg" id="4_yoa47"]
+[ext_resource type="AudioStream" uid="uid://5ubqtw2tjucq" path="res://Sound/Sound Effects/Radio/radio_noise_2.ogg" id="7_xxsq3"]
+[ext_resource type="AudioStream" uid="uid://31qd8xo1kixc" path="res://Sound/Sound Effects/Radio/radio_noise_3.ogg" id="8_vfcgv"]
+[ext_resource type="Script" path="res://Scripts/Ui/Inputs/input_detection.gd" id="10_4ej8e"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mhwkm"]
+size = Vector2(25, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_an2cb"]
+size = Vector3(25, 0.482422, 25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xpe2v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfxnr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_khsmx"]
+size = Vector3(2, 1.021, 2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dugho"]
+radius = 0.3
+height = 1.65
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nmsrj"]
+radius = 0.3
+height = 1.0
+
+[node name="Test" type="Node3D"]
+
+[node name="Scene" type="Node" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="Scene"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Floor"]
+mesh = SubResource("PlaneMesh_mhwkm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
+shape = SubResource("BoxShape3D_an2cb")
+
+[node name="Cube" type="StaticBody3D" parent="Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499045, -8.56488)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Cube"]
+mesh = SubResource("BoxMesh_xpe2v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Cube"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
+shape = SubResource("BoxShape3D_yfxnr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Scene"]
+transform = Transform3D(0.936495, 0.146455, -0.318635, 0, 0.908618, 0.417629, 0.350681, -0.391108, 0.850916, 0, 2.97753, 0)
+shadow_enabled = true
+
+[node name="TimeAnomaly" type="Node3D" parent="Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.09465)
+
+[node name="TimeChanger" type="Node" parent="Scene/TimeAnomaly" node_paths=PackedStringArray("radio", "default_scene", "alternative_scene", "sound_player")]
+script = ExtResource("2_qdcim")
+radio = NodePath("../../../Scripts/Radio")
+default_scene = NodePath("../Def")
+alternative_scene = NodePath("../Alt")
+sound_player = NodePath("../../../Player/ChangingReallity")
+sound_reaching = ExtResource("2_uj8q8")
+sound_reached = ExtResource("2_h2atc")
+
+[node name="Trigger" type="Area3D" parent="Scene/TimeAnomaly"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.12857)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/TimeAnomaly/Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.193726, 0.532898, -0.0078125)
+shape = SubResource("BoxShape3D_khsmx")
+
+[node name="Def" type="Node3D" parent="Scene/TimeAnomaly"]
+
+[node name="Booth" type="MeshInstance3D" parent="Scene/TimeAnomaly/Def"]
+transform = Transform3D(-0.617475, 0, -0.78659, 0, 1, 0, 0.78659, 0, -0.617475, -0.127498, -0.0175781, -0.889193)
+mesh = ExtResource("1_c2lsc")
+skeleton = NodePath("../../../..")
+
+[node name="Alt" type="Node3D" parent="Scene/TimeAnomaly"]
+
+[node name="Stool" type="MeshInstance3D" parent="Scene/TimeAnomaly/Alt"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0958147, -0.0175781, -0.863772)
+mesh = ExtResource("2_ohnw3")
+skeleton = NodePath("../../..")
+
+[node name="Static" type="AudioStreamPlayer3D" parent="Scene/TimeAnomaly"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.457647, 0)
+stream = ExtResource("4_yoa47")
+attenuation_model = 2
+volume_db = -15.0
+unit_size = 1.95
+autoplay = true
+parameters/looping = true
+
+[node name="Scripts" type="Node" parent="."]
+
+[node name="Radio" type="Node" parent="Scripts" node_paths=PackedStringArray("searchingFreq")]
+script = ExtResource("1_4mfwd")
+searchingFreq = NodePath("../../Player/RadioSearching")
+soundEffect = Array[AudioStream]([ExtResource("7_xxsq3"), ExtResource("8_vfcgv")])
+
+[node name="Input Listener" type="Node" parent="Scripts"]
+script = ExtResource("10_4ej8e")
+
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast") groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, -1.42841)
+script = ExtResource("1_08lnn")
+head = NodePath("Head")
+standingCollision = NodePath("StandingCollision")
+crouchingCollision = NodePath("CrouchingCollision")
+head_raycast = NodePath("HeadRaycast")
+mouseSens = 0.1
+
+[node name="Head" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37555, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0826128)
+
+[node name="StandingCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.828492, 0)
+shape = SubResource("CapsuleShape3D_dugho")
+
+[node name="CrouchingCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.505402, 0)
+shape = SubResource("CapsuleShape3D_nmsrj")
+
+[node name="HeadRaycast" type="RayCast3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01379, 0)
+target_position = Vector3(0, 0.645, 0)
+
+[node name="RadioSearching" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("4_r2unn")
+volume_db = 5.0
+bus = &"VFX"
+parameters/looping = true
+
+[node name="ChangingReallity" type="AudioStreamPlayer2D" parent="Player"]
+volume_db = 5.0
+bus = &"VFX"
+
+[connection signal="body_entered" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="enter"]
+[connection signal="body_exited" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="exit"]

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5mohkfoigjk7"
+path="res://.godot/imported/Prototype_Town.obj-1bb749d43ed11b1918bfe68966bf23ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Prototype_Town.obj-1bb749d43ed11b1918bfe68966bf23ea.mesh"]
+
+source_file="res://Assets/Models/Prototype_Town.obj"
+dest_files=["res://.godot/imported/Prototype_Town.obj-1bb749d43ed11b1918bfe68966bf23ea.mesh", "res://.godot/imported/Prototype_Town.obj-1bb749d43ed11b1918bfe68966bf23ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

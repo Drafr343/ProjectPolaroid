@@ -1,0 +1,360 @@
+[gd_scene load_steps=42 format=3 uid="uid://bhy3kxb428dim"]
+
+[ext_resource type="Script" path="res://Scripts/Mechanics/Radio/radio.gd" id="1_4mfwd"]
+[ext_resource type="Script" path="res://Scripts/PlayerController/player_controller.gd" id="1_08lnn"]
+[ext_resource type="ArrayMesh" uid="uid://2n0igokp8uv7" path="res://Assets/Models/Diner/Props/Booth.obj" id="1_c2lsc"]
+[ext_resource type="AudioStream" uid="uid://ck5c5e3trfb8y" path="res://Sound/Sound Effects/Radio/Freq_reached.ogg" id="2_h2atc"]
+[ext_resource type="ArrayMesh" uid="uid://cgfukggc3lhu3" path="res://Assets/Models/Diner/Props/Stool.obj" id="2_ohnw3"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/Radio/time_changer.gd" id="2_qdcim"]
+[ext_resource type="AudioStream" uid="uid://b6nktn0sknrb2" path="res://Sound/Sound Effects/Radio/Reaching_Freq.ogg" id="2_uj8q8"]
+[ext_resource type="AudioStream" uid="uid://cj4nfl85rrr3f" path="res://Sound/Sound Effects/Radio/radio_freq.ogg" id="4_r2unn"]
+[ext_resource type="AudioStream" uid="uid://xh8hqp0e661c" path="res://Sound/Sound Effects/Radio/radio_noise.ogg" id="4_yoa47"]
+[ext_resource type="AudioStream" uid="uid://5ubqtw2tjucq" path="res://Sound/Sound Effects/Radio/radio_noise_2.ogg" id="7_xxsq3"]
+[ext_resource type="AudioStream" uid="uid://31qd8xo1kixc" path="res://Sound/Sound Effects/Radio/radio_noise_3.ogg" id="8_vfcgv"]
+[ext_resource type="Script" path="res://Scripts/UI/input_detection.gd" id="10_4ej8e"]
+[ext_resource type="Texture2D" uid="uid://63v702suxmka" path="res://Assets/UI/xbox_outline_thick.png" id="13_746io"]
+[ext_resource type="Texture2D" uid="uid://bjfslk71o2bmc" path="res://Assets/UI/Xbox/xbox_button_color_a.png" id="13_hl4fh"]
+[ext_resource type="Script" path="res://Scripts/UI/ui_input_updater.gd" id="14_im412"]
+[ext_resource type="Texture2D" uid="uid://b0tj7mih4y5ao" path="res://Assets/UI/Xbox/xbox_button_color_b.png" id="14_kojwl"]
+[ext_resource type="Texture2D" uid="uid://cnt6r0mh1boyv" path="res://Assets/UI/Keyboard/keyboard_space_icon_outline.png" id="15_euhqc"]
+[ext_resource type="Texture2D" uid="uid://d233pcfdwwcxp" path="res://Assets/UI/Xbox/xbox_button_color_x.png" id="15_jj0tc"]
+[ext_resource type="Texture2D" uid="uid://bdtaaav6vpduj" path="res://Assets/UI/Keyboard/keyboard_space_icon.png" id="15_mk1gd"]
+[ext_resource type="Texture2D" uid="uid://ctl7sjljh55i" path="res://Assets/UI/Xbox/xbox_button_color_y.png" id="16_38v0q"]
+[ext_resource type="Texture2D" uid="uid://c0ipv60peen2x" path="res://Assets/UI/Xbox/xbox_button_y_outline.png" id="17_sbqgu"]
+[ext_resource type="Texture2D" uid="uid://blst02nm7cv8j" path="res://Assets/UI/Xbox/xbox_button_y.png" id="18_8yg70"]
+[ext_resource type="Texture2D" uid="uid://gonuiitrxwhr" path="res://Assets/UI/Keyboard/keyboard_c_outline.png" id="18_f4h4h"]
+[ext_resource type="Texture2D" uid="uid://bb4qk1hdxhhp6" path="res://Assets/UI/Keyboard/keyboard_c.png" id="18_kt45j"]
+[ext_resource type="Texture2D" uid="uid://cy53uulc7dxnv" path="res://Assets/UI/PS5/playstation_button_triangle_outline.png" id="19_ft2tr"]
+[ext_resource type="Texture2D" uid="uid://cpqipv10i3qd3" path="res://Assets/UI/PS5/playstation_button_triangle.png" id="20_cph8l"]
+[ext_resource type="Texture2D" uid="uid://76tl8hifeknq" path="res://Assets/UI/Keyboard/keyboard_f.png" id="21_pffe1"]
+[ext_resource type="Texture2D" uid="uid://yotoi2yiy6f8" path="res://Assets/UI/Xbox/xbox_button_a_outline.png" id="24_618ji"]
+[ext_resource type="Texture2D" uid="uid://bnhu8y20nqpbq" path="res://Assets/UI/Keyboard/keyboard_e.png" id="24_w6kca"]
+[ext_resource type="Texture2D" uid="uid://bbu80fn4rtguv" path="res://Assets/UI/Xbox/xbox_button_a.png" id="25_x8jmb"]
+[ext_resource type="Texture2D" uid="uid://br02efce60g10" path="res://Assets/UI/PS5/playstation_button_cross_outline.png" id="26_bbfuv"]
+[ext_resource type="Texture2D" uid="uid://dqiofy0btrxle" path="res://Assets/UI/keep_pressing.png" id="26_i45d7"]
+[ext_resource type="Texture2D" uid="uid://cky4nx13k6qdn" path="res://Assets/UI/PS5/playstation_button_cross.png" id="27_dgfh7"]
+[ext_resource type="Script" path="res://Scripts/UI/keep_pressing_indicator.gd" id="27_nyfgn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mhwkm"]
+size = Vector2(25, 25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_an2cb"]
+size = Vector3(25, 0.482422, 25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xpe2v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfxnr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_khsmx"]
+size = Vector3(3.8, 1.021, 3.8)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dugho"]
+radius = 0.3
+height = 1.65
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nmsrj"]
+radius = 0.3
+height = 1.0
+
+[node name="Test" type="Node3D"]
+
+[node name="Scene" type="Node" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="Scene"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Floor"]
+mesh = SubResource("PlaneMesh_mhwkm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
+shape = SubResource("BoxShape3D_an2cb")
+
+[node name="Cube" type="StaticBody3D" parent="Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499045, -8.56488)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Cube"]
+mesh = SubResource("BoxMesh_xpe2v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Cube"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
+shape = SubResource("BoxShape3D_yfxnr")
+
+[node name="Cube2" type="StaticBody3D" parent="Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57864, 0.499045, -4.68423)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Cube2"]
+mesh = SubResource("BoxMesh_xpe2v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Cube2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
+shape = SubResource("BoxShape3D_yfxnr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Scene"]
+transform = Transform3D(0.936495, 0.146455, -0.318635, 0, 0.908618, 0.417629, 0.350681, -0.391108, 0.850916, 0, 2.97753, 0)
+shadow_enabled = true
+
+[node name="TimeAnomaly" type="Node3D" parent="Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07971, -5.09465)
+
+[node name="TimeChanger" type="Node" parent="Scene/TimeAnomaly" node_paths=PackedStringArray("radio", "default_scene", "alternative_scene", "sound_player")]
+script = ExtResource("2_qdcim")
+radio = NodePath("../../../Scripts/Radio")
+default_scene = NodePath("../Def")
+alternative_scene = NodePath("../Alt")
+sound_player = NodePath("../../../Player/ChangingReallity")
+sound_reaching = ExtResource("2_uj8q8")
+sound_reached = ExtResource("2_h2atc")
+
+[node name="Trigger" type="Area3D" parent="Scene/TimeAnomaly"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.08484, -0.12857)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/TimeAnomaly/Trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.193726, 0.532898, -0.0078125)
+shape = SubResource("BoxShape3D_khsmx")
+
+[node name="Def" type="Node3D" parent="Scene/TimeAnomaly"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.08484, 0)
+
+[node name="Booth" type="MeshInstance3D" parent="Scene/TimeAnomaly/Def"]
+transform = Transform3D(-0.617475, 0, -0.78659, 0, 1, 0, 0.78659, 0, -0.617475, -0.127498, -0.0175781, -0.889193)
+mesh = ExtResource("1_c2lsc")
+skeleton = NodePath("../../../..")
+
+[node name="Alt" type="Node3D" parent="Scene/TimeAnomaly"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.08484, 0)
+
+[node name="Stool" type="MeshInstance3D" parent="Scene/TimeAnomaly/Alt"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0958147, -0.0175781, -0.863772)
+mesh = ExtResource("2_ohnw3")
+skeleton = NodePath("../../..")
+
+[node name="Static" type="AudioStreamPlayer3D" parent="Scene/TimeAnomaly"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.627189, 0)
+stream = ExtResource("4_yoa47")
+attenuation_model = 2
+volume_db = -15.0
+unit_size = 1.95
+autoplay = true
+parameters/looping = true
+
+[node name="Scripts" type="Node" parent="."]
+
+[node name="Radio" type="Node" parent="Scripts" node_paths=PackedStringArray("searchingFreq")]
+script = ExtResource("1_4mfwd")
+searchingFreq = NodePath("../../Player/RadioSearching")
+soundEffect = Array[AudioStream]([ExtResource("7_xxsq3"), ExtResource("8_vfcgv")])
+
+[node name="Input Listener" type="Node" parent="Scripts"]
+script = ExtResource("10_4ej8e")
+
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast") groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, -1.42841)
+script = ExtResource("1_08lnn")
+head = NodePath("Head")
+standingCollision = NodePath("StandingCollision")
+crouchingCollision = NodePath("CrouchingCollision")
+head_raycast = NodePath("HeadRaycast")
+mouseSens = 0.1
+
+[node name="Head" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37555, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0826128)
+
+[node name="StandingCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.828492, 0)
+shape = SubResource("CapsuleShape3D_dugho")
+
+[node name="CrouchingCollision" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.505402, 0)
+shape = SubResource("CapsuleShape3D_nmsrj")
+
+[node name="HeadRaycast" type="RayCast3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01379, 0)
+target_position = Vector3(0, 0.645, 0)
+
+[node name="RadioSearching" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("4_r2unn")
+volume_db = 5.0
+bus = &"VFX"
+parameters/looping = true
+
+[node name="ChangingReallity" type="AudioStreamPlayer2D" parent="Player"]
+volume_db = 5.0
+bus = &"VFX"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InteractIndicator_1" type="TextureRect" parent="Control" node_paths=PackedStringArray("input_listener", "camera_3d", "reference_3d", "object_3d")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_746io")
+expand_mode = 1
+script = ExtResource("14_im412")
+input_listener = NodePath("../../Scripts/Input Listener")
+reactive = true
+action_name = "interact"
+keyboard = ExtResource("18_8yg70")
+keyboard_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("18_8yg70")
+xbox_pressed = ExtResource("17_sbqgu")
+playstation = ExtResource("20_cph8l")
+playstation_pressed = ExtResource("19_ft2tr")
+spatial = true
+camera_3d = NodePath("../../Player/Head/Camera3D")
+reference_3d = NodePath("../../Player")
+object_3d = NodePath("../../Scene/TimeAnomaly")
+visible_texture = ExtResource("13_746io")
+interactable_distance = 2.0
+visible_distance = 4.0
+
+[node name="InteractIndicator_2" type="TextureRect" parent="Control" node_paths=PackedStringArray("input_listener", "camera_3d", "reference_3d", "object_3d")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_746io")
+expand_mode = 1
+script = ExtResource("14_im412")
+input_listener = NodePath("../../Scripts/Input Listener")
+reactive = true
+action_name = "interact"
+keyboard = ExtResource("18_8yg70")
+keyboard_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("18_8yg70")
+xbox_pressed = ExtResource("17_sbqgu")
+playstation = ExtResource("20_cph8l")
+playstation_pressed = ExtResource("19_ft2tr")
+spatial = true
+camera_3d = NodePath("../../Player/Head/Camera3D")
+reference_3d = NodePath("../../Player")
+object_3d = NodePath("../../Scene/Cube2")
+visible_texture = ExtResource("13_746io")
+interactable_distance = 2.0
+visible_distance = 4.0
+
+[node name="Keep_pressing" type="TextureRect" parent="Control" node_paths=PackedStringArray("input_listener")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -156.0
+offset_right = 8.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("25_x8jmb")
+expand_mode = 1
+script = ExtResource("14_im412")
+input_listener = NodePath("../../Scripts/Input Listener")
+reactive = true
+action_name = "jump"
+keyboard = ExtResource("26_bbfuv")
+keyboard_pressed = ExtResource("27_dgfh7")
+xbox = ExtResource("24_618ji")
+xbox_pressed = ExtResource("25_x8jmb")
+playstation = ExtResource("26_bbfuv")
+playstation_pressed = ExtResource("27_dgfh7")
+
+[node name="Keep_pressing_indicator" type="TextureRect" parent="Control/Keep_pressing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.745, 0.745)
+texture = ExtResource("26_i45d7")
+expand_mode = 1
+stretch_mode = 3
+script = ExtResource("27_nyfgn")
+action_name = "interact"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer" node_paths=PackedStringArray("input_listener")]
+layout_mode = 2
+texture = ExtResource("13_hl4fh")
+script = ExtResource("14_im412")
+input_listener = NodePath("../../../Scripts/Input Listener")
+reactive = true
+action_name = "jump"
+keyboard = ExtResource("15_euhqc")
+keyboard_pressed = ExtResource("15_mk1gd")
+xbox = ExtResource("24_618ji")
+xbox_pressed = ExtResource("25_x8jmb")
+playstation = ExtResource("26_bbfuv")
+playstation_pressed = ExtResource("27_dgfh7")
+
+[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer" node_paths=PackedStringArray("input_listener")]
+layout_mode = 2
+texture = ExtResource("14_kojwl")
+script = ExtResource("14_im412")
+input_listener = NodePath("../../../Scripts/Input Listener")
+reactive = true
+action_name = "crouch"
+keyboard = ExtResource("18_f4h4h")
+keyboard_pressed = ExtResource("18_kt45j")
+xbox = ExtResource("24_618ji")
+xbox_pressed = ExtResource("25_x8jmb")
+playstation = ExtResource("26_bbfuv")
+playstation_pressed = ExtResource("27_dgfh7")
+
+[node name="TextureRect4" type="TextureRect" parent="Control/HBoxContainer" node_paths=PackedStringArray("input_listener")]
+layout_mode = 2
+texture = ExtResource("15_jj0tc")
+script = ExtResource("14_im412")
+input_listener = NodePath("../../../Scripts/Input Listener")
+keyboard = ExtResource("21_pffe1")
+xbox = ExtResource("24_618ji")
+xbox_pressed = ExtResource("25_x8jmb")
+playstation = ExtResource("26_bbfuv")
+playstation_pressed = ExtResource("27_dgfh7")
+
+[node name="TextureRect5" type="TextureRect" parent="Control/HBoxContainer" node_paths=PackedStringArray("input_listener")]
+layout_mode = 2
+texture = ExtResource("16_38v0q")
+script = ExtResource("14_im412")
+input_listener = NodePath("../../../Scripts/Input Listener")
+keyboard = ExtResource("24_w6kca")
+xbox = ExtResource("24_618ji")
+xbox_pressed = ExtResource("25_x8jmb")
+playstation = ExtResource("26_bbfuv")
+playstation_pressed = ExtResource("27_dgfh7")
+
+[connection signal="body_entered" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="enter"]
+[connection signal="body_exited" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="exit"]

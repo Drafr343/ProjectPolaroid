@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://bhy3kxb428dim"]
+[gd_scene load_steps=62 format=3 uid="uid://bhy3kxb428dim"]
 
 [ext_resource type="ArrayMesh" uid="uid://bnoqbgouvkccv" path="res://Assets/Models/Furniture.obj" id="1_3ltvp"]
 [ext_resource type="Script" path="res://Scripts/Mechanics/Radio/radio.gd" id="1_4mfwd"]
@@ -12,7 +12,6 @@
 [ext_resource type="AudioStream" uid="uid://b6nktn0sknrb2" path="res://Sound/Sound Effects/Radio/Reaching_Freq.ogg" id="2_uj8q8"]
 [ext_resource type="AudioStream" uid="uid://cj4nfl85rrr3f" path="res://Sound/Sound Effects/Radio/radio_freq.ogg" id="4_r2unn"]
 [ext_resource type="AudioStream" uid="uid://xh8hqp0e661c" path="res://Sound/Sound Effects/Radio/radio_noise.ogg" id="4_yoa47"]
-[ext_resource type="Material" uid="uid://c346a7h2h82pg" path="res://Assets/Prototype/Materials/Blue.tres" id="7_lnyux"]
 [ext_resource type="AudioStream" uid="uid://5ubqtw2tjucq" path="res://Sound/Sound Effects/Radio/radio_noise_2.ogg" id="7_xxsq3"]
 [ext_resource type="Material" uid="uid://k844o25hwr5g" path="res://Assets/Prototype/Materials/Yellow.tres" id="8_8f88a"]
 [ext_resource type="AudioStream" uid="uid://31qd8xo1kixc" path="res://Sound/Sound Effects/Radio/radio_noise_3.ogg" id="8_vfcgv"]
@@ -26,10 +25,8 @@
 [ext_resource type="Material" uid="uid://cd6cje341ob4p" path="res://Assets/Prototype/Materials/Brown.tres" id="18_gkta6"]
 [ext_resource type="ArrayMesh" uid="uid://dp1ujedbrpmmk" path="res://Assets/Models/Drawer.obj" id="19_bjjxf"]
 [ext_resource type="Texture2D" uid="uid://cy53uulc7dxnv" path="res://Assets/UI/PS5/playstation_button_triangle_outline.png" id="19_ft2tr"]
-[ext_resource type="ArrayMesh" uid="uid://cksef7svatqeq" path="res://Assets/Models/Buildings/Motel/Fence.obj" id="19_nefni"]
 [ext_resource type="Script" path="res://Scripts/Mechanics/Interactable/OpenDrawer.gd" id="19_yyynk"]
 [ext_resource type="Texture2D" uid="uid://cpqipv10i3qd3" path="res://Assets/UI/PS5/playstation_button_triangle.png" id="20_cph8l"]
-[ext_resource type="ArrayMesh" uid="uid://cchsb484j5xro" path="res://Assets/Models/Buildings/Motel/FenceDoor.obj" id="21_vliym"]
 [ext_resource type="Texture2D" uid="uid://yotoi2yiy6f8" path="res://Assets/UI/Xbox/xbox_button_a_outline.png" id="24_618ji"]
 [ext_resource type="ArrayMesh" uid="uid://ckktrqamtts6n" path="res://Assets/Models/Door.obj" id="24_aqe51"]
 [ext_resource type="Texture2D" uid="uid://cu7vul5dy76k4" path="res://Assets/UI/PS5/Disabled_btn.png" id="24_v3bi6"]
@@ -48,16 +45,10 @@
 [ext_resource type="ArrayMesh" uid="uid://fkhr0ixth32t" path="res://Assets/Models/FurnitureDoor.obj" id="35_46phc"]
 [ext_resource type="Material" uid="uid://dh3uwiw7otj4r" path="res://Assets/Prototype/Materials/Creme.tres" id="35_alnhp"]
 [ext_resource type="Material" uid="uid://oesk7blf0db5" path="res://Assets/Prototype/Materials/Glass.tres" id="36_ga2i7"]
-[ext_resource type="ArrayMesh" uid="uid://c5mohkfoigjk7" path="res://Assets/Models/Prototype_Town.obj" id="37_edwoy"]
+[ext_resource type="ArrayMesh" uid="uid://c052sikxxfrlw" path="res://Assets/Models/Prototype_Town.obj" id="37_edwoy"]
 [ext_resource type="Material" uid="uid://oa2k3trsvp0e" path="res://Assets/Prototype/Materials/Dark_Grey.tres" id="38_oi6go"]
 [ext_resource type="Material" uid="uid://bpq1wiwiewjou" path="res://Assets/Prototype/Materials/Green.tres" id="39_kojvj"]
 [ext_resource type="Material" uid="uid://xvi83eyswbre" path="res://Assets/Prototype/Materials/Grey.tres" id="40_4sk5u"]
-[ext_resource type="ArrayMesh" uid="uid://44qa1yjkypef" path="res://Assets/Models/Buildings/Diner.obj" id="41_lqeo7"]
-[ext_resource type="ArrayMesh" uid="uid://dger5qbho554j" path="res://Assets/Models/Buildings/MotelBuilding.obj" id="42_1wnpg"]
-[ext_resource type="Material" uid="uid://cr0rf3vk4gdqf" path="res://Assets/Prototype/Materials/Red.tres" id="43_o4jcc"]
-[ext_resource type="ArrayMesh" uid="uid://dua4xx1svq6wb" path="res://Assets/Models/LowPoly_Car.obj" id="43_xvg5u"]
-[ext_resource type="ArrayMesh" uid="uid://b7u2cj0eplgd7" path="res://Assets/Models/fence.obj" id="46_yv3pe"]
-[ext_resource type="ArrayMesh" uid="uid://bvq11yrgngpcl" path="res://Assets/Models/Wall.obj" id="47_3bkah"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dugho"]
 radius = 0.3
@@ -67,8 +58,6 @@ height = 1.65
 radius = 0.3
 height = 1.0
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_0vha0"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_blodg"]
 size = Vector3(0.207092, 0.0623169, 0.10498)
 
@@ -77,6 +66,9 @@ size = Vector3(0.0302734, 0.240723, 0.592163)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t0li5"]
 size = Vector3(0.0395508, 0.764648, 0.600067)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mhwkm"]
+size = Vector2(25, 25)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_an2cb"]
 size = Vector3(25, 0.482422, 25)
@@ -149,15 +141,10 @@ bus = &"VFX"
 
 [node name="Scene" type="Node" parent="."]
 
-[node name="Water" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(2.8884, 0, 157.293, 0, 157.32, 0, -157.293, 0, 2.8884, -43.1448, -6.01575, -33.0862)
-material_override = ExtResource("7_lnyux")
-mesh = SubResource("PlaneMesh_0vha0")
-
 [node name="Props" type="Node3D" parent="Scene"]
 
 [node name="Bottle" type="StaticBody3D" parent="Scene/Props" node_paths=PackedStringArray("texture_rect_node", "player", "camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47693, -0.994656, 1.59493)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47693, 1.21368, 1.59493)
 script = ExtResource("1_qxy7q")
 detection_radius = 1.5
 screen_distance = 100.0
@@ -369,20 +356,14 @@ material_override = ExtResource("18_gkta6")
 mesh = ExtResource("1_3ltvp")
 skeleton = NodePath("../..")
 
-[node name="FurnitureDrawer" type="Node3D" parent="Scene/Props/Furniture2/Furniture" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "target_node", "objects")]
+[node name="FurnitureDrawer" type="Node3D" parent="Scene/Props/Furniture2/Furniture" node_paths=PackedStringArray("texture_rect_node", "player", "camera")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.757428, 1.06208, -0.347585)
 script = ExtResource("19_yyynk")
 detection_radius = 1.6
 texture_rect_node = NodePath("Indicator/InteractIndicator")
 player = NodePath("../../../../../Player")
 camera = NodePath("../../../../../Player/Head/Camera3D")
-translation_amount = Vector3(0.3, 0, 0)
-spawner = true
-target_node = NodePath("Target")
-objects = [NodePath("../../../Bottle")]
-
-[node name="Target" type="Node3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDrawer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0695641, -0.0468356, 0.0281474)
+translation_amount = Vector3(0.18, 0, 0)
 
 [node name="Indicator" type="Node3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDrawer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2666e-06, 0.0158303, 0.0339434)
@@ -676,6 +657,9 @@ shape = SubResource("BoxShape3D_t0li5")
 
 [node name="Floor" type="StaticBody3D" parent="Scene"]
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Floor"]
+mesh = SubResource("PlaneMesh_mhwkm")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.258789, 0)
 shape = SubResource("BoxShape3D_an2cb")
@@ -749,7 +733,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="TheHungryMoose_Door" type="Node3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.36882, -0.018, -36.6356)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.018, 5.5)
 
 [node name="Indicator" type="Node3D" parent="Scene/TheHungryMoose_Door" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "obj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0650337, 1.11331, 0.936716)
@@ -805,7 +789,7 @@ transform = Transform3D(1, 0, 2.142e-08, 0, 1, 0, -2.142e-08, 0, 1, -0.00093329,
 shape = SubResource("BoxShape3D_ga8a2")
 
 [node name="TheHungryMoose" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-0.999999, 0.00115232, 0.000490616, 0.00115288, 0.999999, 0.00111276, -0.000489308, 0.00111334, -0.999999, 6.36882, -0.018, -36.6356)
+transform = Transform3D(-0.999999, 0.00115232, 0.000490616, 0.00115288, 0.999999, 0.00111276, -0.000489308, 0.00111334, -0.999999, -1, -0.018, 5.5)
 mesh = ExtResource("32_yi6qw")
 skeleton = NodePath("../../Control/UI/Interactives")
 surface_material_override/0 = ExtResource("33_kkwha")
@@ -818,7 +802,7 @@ surface_material_override/9 = ExtResource("35_alnhp")
 surface_material_override/10 = ExtResource("36_ga2i7")
 
 [node name="PrototypeTown" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(0.998507, 0, 0.0546191, 0, 1, 0, -0.0546191, 0, 0.998507, -54.9961, -0.0175781, 32.1239)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.9961, -0.0175781, 32.1239)
 mesh = ExtResource("37_edwoy")
 surface_material_override/0 = ExtResource("38_oi6go")
 surface_material_override/1 = ExtResource("39_kojvj")
@@ -831,210 +815,13 @@ surface_material_override/7 = ExtResource("40_4sk5u")
 surface_material_override/8 = ExtResource("40_4sk5u")
 surface_material_override/9 = ExtResource("40_4sk5u")
 surface_material_override/10 = ExtResource("40_4sk5u")
-surface_material_override/11 = ExtResource("38_oi6go")
-surface_material_override/12 = ExtResource("38_oi6go")
 surface_material_override/13 = ExtResource("40_4sk5u")
 surface_material_override/14 = ExtResource("40_4sk5u")
-surface_material_override/15 = ExtResource("38_oi6go")
-surface_material_override/16 = ExtResource("38_oi6go")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene/PrototypeTown"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/PrototypeTown/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_1xsxe")
-
-[node name="Diner" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(0.00859105, 0, -0.999885, 0, 1, 0, -0.982475, 0, -0.0087433, 17.2376, -0.0172119, 15.1483)
-mesh = ExtResource("41_lqeo7")
-
-[node name="MotelBuilding" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6022, -0.0175781, -4.41489)
-mesh = ExtResource("42_1wnpg")
-
-[node name="LowPolyCar" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.112, 0.382131, -25.8647)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar2" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-0.833635, 0, 0.552315, 0, 1, 0, -0.552315, 0, -0.833635, 9.82793, 0.383271, 19.5889)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar3" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-0.833635, 0, 0.552315, 0, 1, 0, -0.552315, 0, -0.833635, 13.7078, 0.383271, 19.5889)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar4" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-0.833635, 0, 0.552315, 0, 1, 0, -0.552315, 0, -0.833635, 17.742, 0.383271, 19.5889)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar8" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-0.682993, 0, 0.730425, 0, 1, 0, -0.730425, 0, -0.682993, 12.8324, 0.383271, -11.8491)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar9" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-0.574548, 0, 0.818471, 0, 1, 0, -0.818471, 0, -0.574548, 13.3404, 0.383271, -4.40689)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar10" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-0.993826, 0, 0.110949, 0, 1, 0, -0.110949, 0, -0.993826, 1.54661, 0.383271, -12.2036)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar11" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(0.01836, 0, 0.999831, 0, 1, 0, -0.999831, 0, 0.01836, -30.2285, 0.383271, 32.6647)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="Fence2" type="Node3D" parent="Scene" node_paths=PackedStringArray("texture_rect_node")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 19.7446, -0.138396, 5.35443)
-script = ExtResource("17_j1h1u")
-texture_rect_node = NodePath("FenceDoor/Indicator/InteractIndicator")
-
-[node name="Fence" type="MeshInstance3D" parent="Scene/Fence2"]
-mesh = ExtResource("19_nefni")
-skeleton = NodePath("../../Props/Furniture2/Furniture")
-surface_material_override/0 = ExtResource("40_4sk5u")
-surface_material_override/1 = ExtResource("40_4sk5u")
-surface_material_override/2 = ExtResource("40_4sk5u")
-surface_material_override/3 = ExtResource("40_4sk5u")
-
-[node name="Fence3" type="MeshInstance3D" parent="Scene/Fence2"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.72205e-06, 0, 0.810782)
-mesh = ExtResource("19_nefni")
-skeleton = NodePath("../../Props/Furniture2/Furniture")
-surface_material_override/0 = ExtResource("40_4sk5u")
-surface_material_override/1 = ExtResource("40_4sk5u")
-surface_material_override/2 = ExtResource("40_4sk5u")
-surface_material_override/3 = ExtResource("40_4sk5u")
-
-[node name="FenceDoor" type="MeshInstance3D" parent="Scene/Fence2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012888, -9.18284e-07, -0.0057466)
-mesh = ExtResource("21_vliym")
-skeleton = NodePath("../../Props/Furniture2/Furniture")
-surface_material_override/0 = ExtResource("40_4sk5u")
-
-[node name="Indicator" type="Node3D" parent="Scene/Fence2/FenceDoor" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "obj")]
-transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0.0425234, 1.38104, 0.861732)
-script = ExtResource("17_j1h1u")
-texture_rect_node = NodePath("InteractIndicator")
-player = NodePath("../../../../Player")
-camera = NodePath("../../../../Player/Head/Camera3D")
-obj = NodePath("..")
-rotation_amount = -90.0
-
-[node name="InteractIndicator" type="TextureRect" parent="Scene/Fence2/FenceDoor/Indicator" node_paths=PackedStringArray("input_listener", "camera_3d", "player_reference", "object_3d")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_right = 10.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("13_746io")
-expand_mode = 1
-script = ExtResource("14_im412")
-input_listener = NodePath("../../../../../Scripts/Input Listener")
-action_name = "interact"
-keyboard = ExtResource("16_t5ewu")
-keyboard_pressed = ExtResource("16_t5ewu")
-keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
-xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
-playstation_disabled = ExtResource("24_v3bi6")
-spatial = true
-camera_3d = NodePath("../../../../../Player/Head/Camera3D")
-player_reference = NodePath("../../../../../Player")
-object_3d = NodePath("..")
-visible_texture = ExtResource("13_746io")
-interactable_distance = 1.5
-visible_distance = 2.6
-
-[node name="Fence" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3771, -0.0175762, 16.4801)
-mesh = ExtResource("46_yv3pe")
-
-[node name="Wall" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.0333, -0.0175781, -23.8082)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall2" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 30.0173, -0.0175781, -23.8082)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall3" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.9176, -0.0175781, -23.8082)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall4" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -26.9694)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall5" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -29.9814)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall6" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -32.9019)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall7" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -35.7348)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall8" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -38.6247)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall9" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -41.5336)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall10" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.6782, -0.0175781, -41.3966)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall11" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.8453, -0.0175781, -41.3966)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall12" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9554, -0.0175781, -41.3966)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall13" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.0465, -0.0175781, -41.3966)
-mesh = ExtResource("47_3bkah")
-
-[node name="Wall14" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.02, -0.0175781, -41.3966)
-mesh = ExtResource("47_3bkah")
-
-[node name="LowPolyCar5" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.0687, 0.256435, -39.5708)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar6" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.0687, 0.256435, -31.8578)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
-
-[node name="LowPolyCar7" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(0.764865, 0, -0.64419, 0, 1, 0, 0.64419, 0, 0.764865, 20.2677, 0.256435, -30.8535)
-material_override = ExtResource("43_o4jcc")
-mesh = ExtResource("43_xvg5u")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
