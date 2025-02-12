@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://bhy3kxb428dim"]
+[gd_scene load_steps=82 format=3 uid="uid://bhy3kxb428dim"]
 
 [ext_resource type="ArrayMesh" uid="uid://bnoqbgouvkccv" path="res://Assets/Models/Furniture.obj" id="1_3ltvp"]
 [ext_resource type="Script" path="res://Scripts/Mechanics/Radio/radio.gd" id="1_4mfwd"]
@@ -12,32 +12,37 @@
 [ext_resource type="AudioStream" uid="uid://b6nktn0sknrb2" path="res://Sound/Sound Effects/Radio/Reaching_Freq.ogg" id="2_uj8q8"]
 [ext_resource type="AudioStream" uid="uid://cj4nfl85rrr3f" path="res://Sound/Sound Effects/Radio/radio_freq.ogg" id="4_r2unn"]
 [ext_resource type="AudioStream" uid="uid://xh8hqp0e661c" path="res://Sound/Sound Effects/Radio/radio_noise.ogg" id="4_yoa47"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/flags_manager.gd" id="5_rcata"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/health_manager.gd" id="6_btarv"]
 [ext_resource type="Material" uid="uid://c346a7h2h82pg" path="res://Assets/Prototype/Materials/Blue.tres" id="7_lnyux"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/Weapons/info.gd" id="7_mtncx"]
 [ext_resource type="AudioStream" uid="uid://5ubqtw2tjucq" path="res://Sound/Sound Effects/Radio/radio_noise_2.ogg" id="7_xxsq3"]
 [ext_resource type="Material" uid="uid://k844o25hwr5g" path="res://Assets/Prototype/Materials/Yellow.tres" id="8_8f88a"]
 [ext_resource type="AudioStream" uid="uid://31qd8xo1kixc" path="res://Sound/Sound Effects/Radio/radio_noise_3.ogg" id="8_vfcgv"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/Weapons/weapon.gd" id="9_m24ri"]
 [ext_resource type="Script" path="res://Scripts/UI/input_detection.gd" id="10_4ej8e"]
 [ext_resource type="Texture2D" uid="uid://63v702suxmka" path="res://Assets/UI/xbox_outline_thick.png" id="13_746io"]
 [ext_resource type="Script" path="res://Scripts/UI/ui_input_updater.gd" id="14_im412"]
+[ext_resource type="Texture2D" uid="uid://bg3qsngifvay" path="res://Assets/UI/Xbox/xbox_button_x.png" id="15_pwh51"]
 [ext_resource type="Texture2D" uid="uid://bnhu8y20nqpbq" path="res://Assets/UI/Keyboard/Keyboard_E.png" id="16_t5ewu"]
+[ext_resource type="Texture2D" uid="uid://bys5hakgfokcf" path="res://Assets/UI/Xbox/xbox_button_x_outline.png" id="16_xwrca"]
 [ext_resource type="Script" path="res://Scripts/Mechanics/Interactable/OpenDoor.gd" id="17_j1h1u"]
-[ext_resource type="Texture2D" uid="uid://c0ipv60peen2x" path="res://Assets/UI/Xbox/xbox_button_y_outline.png" id="17_sbqgu"]
-[ext_resource type="Texture2D" uid="uid://blst02nm7cv8j" path="res://Assets/UI/Xbox/xbox_button_y.png" id="18_8yg70"]
 [ext_resource type="Material" uid="uid://cd6cje341ob4p" path="res://Assets/Prototype/Materials/Brown.tres" id="18_gkta6"]
 [ext_resource type="ArrayMesh" uid="uid://dp1ujedbrpmmk" path="res://Assets/Models/Drawer.obj" id="19_bjjxf"]
-[ext_resource type="Texture2D" uid="uid://cy53uulc7dxnv" path="res://Assets/UI/PS5/playstation_button_triangle_outline.png" id="19_ft2tr"]
 [ext_resource type="ArrayMesh" uid="uid://cksef7svatqeq" path="res://Assets/Models/Buildings/Motel/Fence.obj" id="19_nefni"]
 [ext_resource type="Script" path="res://Scripts/Mechanics/Interactable/OpenDrawer.gd" id="19_yyynk"]
-[ext_resource type="Texture2D" uid="uid://cpqipv10i3qd3" path="res://Assets/UI/PS5/playstation_button_triangle.png" id="20_cph8l"]
 [ext_resource type="ArrayMesh" uid="uid://cchsb484j5xro" path="res://Assets/Models/Buildings/Motel/FenceDoor.obj" id="21_vliym"]
 [ext_resource type="Texture2D" uid="uid://yotoi2yiy6f8" path="res://Assets/UI/Xbox/xbox_button_a_outline.png" id="24_618ji"]
 [ext_resource type="ArrayMesh" uid="uid://ckktrqamtts6n" path="res://Assets/Models/Door.obj" id="24_aqe51"]
 [ext_resource type="Texture2D" uid="uid://cu7vul5dy76k4" path="res://Assets/UI/PS5/Disabled_btn.png" id="24_v3bi6"]
+[ext_resource type="ArrayMesh" uid="uid://dpni8likcnsu1" path="res://Assets/Models/Key.obj" id="25_3e22y"]
 [ext_resource type="Texture2D" uid="uid://0dsin38agusy" path="res://Assets/UI/Circle.png" id="25_38vci"]
 [ext_resource type="Texture2D" uid="uid://bbu80fn4rtguv" path="res://Assets/UI/Xbox/xbox_button_a.png" id="25_x8jmb"]
 [ext_resource type="Texture2D" uid="uid://br02efce60g10" path="res://Assets/UI/PS5/playstation_button_cross_outline.png" id="26_bbfuv"]
 [ext_resource type="Texture2D" uid="uid://c27f5mjko3w1q" path="res://Assets/UI/keep_pressing.png" id="26_i45d7"]
 [ext_resource type="Texture2D" uid="uid://cnn3yd703v7n5" path="res://Assets/UI/PS5/playstation_button_square_outline.png" id="26_rdcop"]
+[ext_resource type="Script" path="res://Scripts/Mechanics/Interactable/Interactable.gd" id="26_tthmr"]
+[ext_resource type="ArrayMesh" uid="uid://c5jdgw8c6t7r7" path="res://Assets/Models/VendingMachine.obj" id="26_wu8jj"]
 [ext_resource type="Texture2D" uid="uid://cky4nx13k6qdn" path="res://Assets/UI/PS5/playstation_button_cross.png" id="27_dgfh7"]
 [ext_resource type="Texture2D" uid="uid://wmj4oh7pf6to" path="res://Assets/UI/PS5/playstation_button_square.png" id="27_ma6a6"]
 [ext_resource type="Script" path="res://Scripts/UI/keep_pressing_indicator.gd" id="27_nyfgn"]
@@ -53,19 +58,38 @@
 [ext_resource type="Material" uid="uid://bpq1wiwiewjou" path="res://Assets/Prototype/Materials/Green.tres" id="39_kojvj"]
 [ext_resource type="Material" uid="uid://xvi83eyswbre" path="res://Assets/Prototype/Materials/Grey.tres" id="40_4sk5u"]
 [ext_resource type="ArrayMesh" uid="uid://44qa1yjkypef" path="res://Assets/Models/Buildings/Diner.obj" id="41_lqeo7"]
-[ext_resource type="ArrayMesh" uid="uid://dger5qbho554j" path="res://Assets/Models/Buildings/MotelBuilding.obj" id="42_1wnpg"]
 [ext_resource type="Material" uid="uid://cr0rf3vk4gdqf" path="res://Assets/Prototype/Materials/Red.tres" id="43_o4jcc"]
 [ext_resource type="ArrayMesh" uid="uid://dua4xx1svq6wb" path="res://Assets/Models/LowPoly_Car.obj" id="43_xvg5u"]
 [ext_resource type="ArrayMesh" uid="uid://b7u2cj0eplgd7" path="res://Assets/Models/fence.obj" id="46_yv3pe"]
 [ext_resource type="ArrayMesh" uid="uid://bvq11yrgngpcl" path="res://Assets/Models/Wall.obj" id="47_3bkah"]
+[ext_resource type="ArrayMesh" uid="uid://4axoks7qsgfh" path="res://Assets/Models/Buildings/Motel/Motel.obj" id="58_l3y88"]
+[ext_resource type="ArrayMesh" uid="uid://di4sbuqslons4" path="res://Assets/Models/Buildings/Motel/Motel4.obj" id="61_fe3p5"]
+[ext_resource type="ArrayMesh" uid="uid://byllcpgpmnyf5" path="res://Assets/Models/Props/MooseCoin.obj" id="62_71rr4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n8q4r"]
+
+[sub_resource type="Sky" id="Sky_puasy"]
+sky_material = SubResource("ProceduralSkyMaterial_n8q4r")
+
+[sub_resource type="Environment" id="Environment_s28fx"]
+sky = SubResource("Sky_puasy")
+ambient_light_source = 3
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 0.75
+ssr_enabled = true
+ssr_max_steps = 32
+fog_enabled = true
+fog_density = 0.0275
+volumetric_fog_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dugho"]
 radius = 0.3
-height = 1.65
+height = 1.5
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nmsrj"]
 radius = 0.3
-height = 1.0
+height = 0.9
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0vha0"]
 
@@ -76,7 +100,10 @@ size = Vector3(0.207092, 0.0623169, 0.10498)
 size = Vector3(0.0302734, 0.240723, 0.592163)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_t0li5"]
-size = Vector3(0.0395508, 0.764648, 0.600067)
+size = Vector3(0.0395508, 1.99475, 1.22472)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rouh0"]
+size = Vector3(1.25543, 2.25574, 0.856354)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_an2cb"]
 size = Vector3(25, 0.482422, 25)
@@ -106,6 +133,21 @@ soundEffect = Array[AudioStream]([ExtResource("7_xxsq3"), ExtResource("8_vfcgv")
 [node name="Input Listener" type="Node" parent="Scripts"]
 script = ExtResource("10_4ej8e")
 
+[node name="Flags" type="Node" parent="Scripts"]
+script = ExtResource("5_rcata")
+
+[node name="Health Manager" type="Node" parent="Scripts"]
+script = ExtResource("6_btarv")
+
+[node name="Weapon Manager" type="Node" parent="Scripts" node_paths=PackedStringArray("weapon", "on_mag", "on_inv")]
+script = ExtResource("7_mtncx")
+weapon = NodePath("../../Player/Node3D")
+on_mag = NodePath("../../Control/UI/Label")
+on_inv = NodePath("../../Control/UI/Label2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_s28fx")
+
 [node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("head", "standingCollision", "crouchingCollision", "head_raycast") groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103987, -1.42841)
 script = ExtResource("1_08lnn")
@@ -114,7 +156,7 @@ standingCollision = NodePath("StandingCollision")
 crouchingCollision = NodePath("CrouchingCollision")
 head_raycast = NodePath("HeadRaycast")
 walkingSpeed = 2.3
-sprintingSpeed = 5.0
+sprintingSpeed = 3.8
 crouchingSpeed = 1.0
 jumpVelocity = 2.5
 mouseSens = 0.1
@@ -124,13 +166,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37555, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Player/Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0826128)
+fov = 90.0
 
 [node name="StandingCollision" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.828492, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7048, 0)
 shape = SubResource("CapsuleShape3D_dugho")
 
 [node name="CrouchingCollision" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.505402, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38171, 0)
 shape = SubResource("CapsuleShape3D_nmsrj")
 
 [node name="HeadRaycast" type="RayCast3D" parent="Player"]
@@ -147,6 +190,15 @@ parameters/looping = true
 volume_db = 5.0
 bus = &"VFX"
 
+[node name="Node3D" type="Node3D" parent="Player" node_paths=PackedStringArray("player", "player_camera")]
+script = ExtResource("9_m24ri")
+es_automatica = false
+modo_disparo = "Semi"
+recoil_vertical = 6.0
+tasa_disparo = 0.5
+player = NodePath("..")
+player_camera = NodePath("../Head/Camera3D")
+
 [node name="Scene" type="Node" parent="."]
 
 [node name="Water" type="MeshInstance3D" parent="Scene"]
@@ -157,7 +209,7 @@ mesh = SubResource("PlaneMesh_0vha0")
 [node name="Props" type="Node3D" parent="Scene"]
 
 [node name="Bottle" type="StaticBody3D" parent="Scene/Props" node_paths=PackedStringArray("texture_rect_node", "player", "camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47693, -0.994656, 1.59493)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47693, -2.42395, 1.59493)
 script = ExtResource("1_qxy7q")
 detection_radius = 1.5
 screen_distance = 100.0
@@ -193,62 +245,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
-playstation_disabled = ExtResource("24_v3bi6")
-spatial = true
-camera_3d = NodePath("../../../../Player/Head/Camera3D")
-player_reference = NodePath("../../../../Player")
-object_3d = NodePath("..")
-visible_texture = ExtResource("13_746io")
-interactable_distance = 1.5
-visible_distance = 2.6
-
-[node name="Bottle3" type="StaticBody3D" parent="Scene/Props" node_paths=PackedStringArray("texture_rect_node", "player", "camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0971, 0.115768, 1.70478)
-script = ExtResource("1_qxy7q")
-detection_radius = 1.5
-screen_distance = 100.0
-texture_rect_node = NodePath("InteractIndicator")
-player = NodePath("../../../Player")
-camera = NodePath("../../../Player/Head/Camera3D")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Props/Bottle3"]
-transform = Transform3D(-4.23218e-08, 0.968209, 0.250143, -1, -4.37114e-08, 0, 1.09341e-08, -0.250143, 0.968209, -0.0945559, 0.0298304, 0)
-material_override = ExtResource("8_8f88a")
-mesh = ExtResource("2_oamxr")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Props/Bottle3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00302124, 0.0312195, -0.0158691)
-shape = SubResource("BoxShape3D_blodg")
-
-[node name="InteractIndicator" type="TextureRect" parent="Scene/Props/Bottle3" node_paths=PackedStringArray("input_listener", "camera_3d", "player_reference", "object_3d")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_right = 10.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("13_746io")
-expand_mode = 1
-script = ExtResource("14_im412")
-input_listener = NodePath("../../../../Scripts/Input Listener")
-action_name = "interact"
-keyboard = ExtResource("16_t5ewu")
-keyboard_pressed = ExtResource("16_t5ewu")
-keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
-xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../Player/Head/Camera3D")
@@ -295,11 +296,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../Player/Head/Camera3D")
@@ -346,11 +347,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../Player/Head/Camera3D")
@@ -361,7 +362,7 @@ interactable_distance = 1.5
 visible_distance = 2.6
 
 [node name="Furniture2" type="Node3D" parent="Scene/Props"]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -10.9873, 2.38419e-07, 1.85084)
+transform = Transform3D(1, 0, -2.08616e-07, 0, 1, 0, 2.08616e-07, 0, 1, -10.9873, 2.38419e-07, 3.51122)
 
 [node name="Furniture" type="MeshInstance3D" parent="Scene/Props/Furniture2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0664592, -0.0175781, 1.12911)
@@ -406,11 +407,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../../../../Player/Head/Camera3D")
@@ -433,20 +434,73 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0173244, -0.00710917, -0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0119629, 0.132813, 0.289871)
 shape = SubResource("BoxShape3D_shi71")
 
-[node name="FurnitureDoor" type="Node3D" parent="Scene/Props/Furniture2/Furniture" node_paths=PackedStringArray("texture_rect_node", "player", "camera")]
+[node name="FurnitureDoor" type="Node3D" parent="Scene/Props/Furniture2/Furniture"]
 transform = Transform3D(0.997923, 0, -0.0644104, 0, 1, 0, 0.0644104, 0, 0.997923, 0.782801, 0.539217, -1.96533)
-script = ExtResource("17_j1h1u")
-texture_rect_node = NodePath("Indicator/InteractIndicator")
-player = NodePath("../../../../../Player")
-camera = NodePath("../../../../../Player/Head/Camera3D")
 
-[node name="Indicator" type="Node3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "obj")]
+[node name="Target" type="Node3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.109295, -0.404854, 0.288596)
+
+[node name="Bottle3" type="StaticBody3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor" node_paths=PackedStringArray("texture_rect_node", "player", "camera")]
+transform = Transform3D(0.832022, 0, 0.554744, 0, 1, 0, -0.554744, 0, 0.832022, -0.133995, -2.91934, 0.273829)
+script = ExtResource("1_qxy7q")
+detection_radius = 1.5
+screen_distance = 100.0
+texture_rect_node = NodePath("InteractIndicator")
+player = NodePath("../../../../../../Player")
+camera = NodePath("../../../../../../Player/Head/Camera3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor/Bottle3"]
+transform = Transform3D(-4.23218e-08, 0.968209, 0.250143, -1, -4.37114e-08, 0, 1.09341e-08, -0.250143, 0.968209, -0.0945559, 0.0179732, 0)
+material_override = ExtResource("8_8f88a")
+mesh = ExtResource("2_oamxr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor/Bottle3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00302124, 0.0312195, -0.0158691)
+shape = SubResource("BoxShape3D_blodg")
+
+[node name="InteractIndicator" type="TextureRect" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor/Bottle3" node_paths=PackedStringArray("input_listener", "camera_3d", "player_reference", "object_3d")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_746io")
+expand_mode = 1
+script = ExtResource("14_im412")
+input_listener = NodePath("../../../../../../../Scripts/Input Listener")
+action_name = "interact"
+keyboard = ExtResource("16_t5ewu")
+keyboard_pressed = ExtResource("16_t5ewu")
+keyboard_disabled = ExtResource("24_v3bi6")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
+xbox_disabled = ExtResource("24_v3bi6")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
+playstation_disabled = ExtResource("24_v3bi6")
+spatial = true
+camera_3d = NodePath("../../../../../../../Player/Head/Camera3D")
+player_reference = NodePath("../../../../../../../Player")
+object_3d = NodePath("..")
+visible_texture = ExtResource("13_746io")
+interactable_distance = 1.5
+visible_distance = 2.6
+
+[node name="Indicator" type="Node3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "obj", "target_node", "objects")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0881147, 0.116943, 0.511642)
 script = ExtResource("17_j1h1u")
 texture_rect_node = NodePath("InteractIndicator")
 player = NodePath("../../../../../../Player")
 camera = NodePath("../../../../../../Player/Head/Camera3D")
-obj = NodePath("..")
+obj = NodePath("../FurnitureDoor")
+spawner = true
+target_node = NodePath("../Target")
+objects = [NodePath("../Bottle3")]
 
 [node name="InteractIndicator" type="TextureRect" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor/Indicator" node_paths=PackedStringArray("input_listener", "camera_3d", "player_reference", "object_3d")]
 anchors_preset = 8
@@ -467,11 +521,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../../../../Player/Head/Camera3D")
@@ -492,6 +546,181 @@ skeleton = NodePath("../../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor/FurnitureDoor/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0090332, 0.386475, 0.313126)
 shape = SubResource("BoxShape3D_t0li5")
+
+[node name="Coin" type="StaticBody3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor" node_paths=PackedStringArray("texture_rect_node", "flags_manager", "player", "camera")]
+transform = Transform3D(0.993987, 0, -0.109508, 0, 1, 0, 0.109508, 0, 0.993987, 1.4585, 0.709019, -1.07143)
+script = ExtResource("1_qxy7q")
+detection_radius = 1.5
+screen_distance = 100.0
+function_name = "GiveMooseCoin"
+texture_rect_node = NodePath("InteractIndicator")
+flags_manager = NodePath("../../../../../../Scripts/Flags")
+player = NodePath("../../../../../../Player")
+camera = NodePath("../../../../../../Player/Head/Camera3D")
+
+[node name="Key" type="MeshInstance3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor/Coin"]
+transform = Transform3D(0.0310516, 0, 0, 0, 0.0310516, 0, 0, 0, 0.0310516, 0, 0, 0)
+mesh = ExtResource("62_71rr4")
+skeleton = NodePath("../../../../../../..")
+surface_material_override/0 = ExtResource("35_alnhp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor/Coin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00302124, 0.0312195, -0.0158691)
+shape = SubResource("BoxShape3D_blodg")
+
+[node name="InteractIndicator" type="TextureRect" parent="Scene/Props/Furniture2/Furniture/FurnitureDoor/Coin" node_paths=PackedStringArray("input_listener", "camera_3d", "player_reference", "object_3d")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_746io")
+expand_mode = 1
+script = ExtResource("14_im412")
+input_listener = NodePath("../../../../../../../Scripts/Input Listener")
+action_name = "interact"
+keyboard = ExtResource("16_t5ewu")
+keyboard_pressed = ExtResource("16_t5ewu")
+keyboard_disabled = ExtResource("24_v3bi6")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
+xbox_disabled = ExtResource("24_v3bi6")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
+playstation_disabled = ExtResource("24_v3bi6")
+spatial = true
+camera_3d = NodePath("../../../../../../../Player/Head/Camera3D")
+player_reference = NodePath("../../../../../../../Player")
+object_3d = NodePath("..")
+visible_texture = ExtResource("13_746io")
+interactable_distance = 1.5
+visible_distance = 2.6
+
+[node name="VendingMachine" type="Node3D" parent="Scene/Props/Furniture2/Furniture"]
+transform = Transform3D(0.997923, 0, -0.0644104, 0, 1, 0, 0.0644104, 0, 0.997923, 3.25041, 0.539217, -3.87537)
+
+[node name="Indicator" type="Node3D" parent="Scene/Props/Furniture2/Furniture/VendingMachine" node_paths=PackedStringArray("texture_rect_node", "flags_manager", "target_node", "object", "player", "camera")]
+transform = Transform3D(4.72534, 0, 0, 0, 4.72534, 0, 0, 0, 4.72534, 1.17864, 0.81909, -0.345027)
+script = ExtResource("26_tthmr")
+detection_radius = 1.5
+function_name = "GiveMotelKey"
+flag_requirement = "HasMooseCoin"
+texture_rect_node = NodePath("InteractIndicator")
+flags_manager = NodePath("../../../../../../Scripts/Flags")
+spawner = true
+target_node = NodePath("../Target")
+object = NodePath("../Key")
+player = NodePath("../../../../../../Player")
+camera = NodePath("../../../../../../Player/Head/Camera3D")
+
+[node name="InteractIndicator" type="TextureRect" parent="Scene/Props/Furniture2/Furniture/VendingMachine/Indicator" node_paths=PackedStringArray("input_listener", "camera_3d", "player_reference", "object_3d")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_746io")
+expand_mode = 1
+script = ExtResource("14_im412")
+input_listener = NodePath("../../../../../../../Scripts/Input Listener")
+action_name = "interact"
+keyboard = ExtResource("16_t5ewu")
+keyboard_pressed = ExtResource("16_t5ewu")
+keyboard_disabled = ExtResource("24_v3bi6")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
+xbox_disabled = ExtResource("24_v3bi6")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
+playstation_disabled = ExtResource("24_v3bi6")
+spatial = true
+camera_3d = NodePath("../../../../../../../Player/Head/Camera3D")
+player_reference = NodePath("../../../../../../../Player")
+object_3d = NodePath("..")
+visible_texture = ExtResource("13_746io")
+interactable_distance = 1.6
+visible_distance = 2.6
+
+[node name="Target" type="Node3D" parent="Scene/Props/Furniture2/Furniture/VendingMachine"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.576864, -0.197148, -0.169437)
+
+[node name="Key" type="StaticBody3D" parent="Scene/Props/Furniture2/Furniture/VendingMachine" node_paths=PackedStringArray("texture_rect_node", "flags_manager", "player", "camera")]
+transform = Transform3D(0.832022, 0, 0.554744, 0, 1, 0, -0.554744, 0, 0.832022, -0.133995, -2.91934, 0.273829)
+script = ExtResource("1_qxy7q")
+detection_radius = 1.5
+screen_distance = 100.0
+function_name = "HasMotelKey"
+texture_rect_node = NodePath("InteractIndicator")
+flags_manager = NodePath("../../../../../../Scripts/Flags")
+player = NodePath("../../../../../../Player")
+camera = NodePath("../../../../../../Player/Head/Camera3D")
+
+[node name="Key" type="MeshInstance3D" parent="Scene/Props/Furniture2/Furniture/VendingMachine/Key"]
+transform = Transform3D(0.0310516, 0, 0, 0, 0.0310516, 0, 0, 0, 0.0310516, 0, 0, 0)
+mesh = ExtResource("25_3e22y")
+skeleton = NodePath("../../../../../../..")
+surface_material_override/0 = ExtResource("35_alnhp")
+surface_material_override/2 = ExtResource("8_8f88a")
+surface_material_override/3 = ExtResource("40_4sk5u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Props/Furniture2/Furniture/VendingMachine/Key"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00302124, 0.0312195, -0.0158691)
+shape = SubResource("BoxShape3D_blodg")
+
+[node name="InteractIndicator" type="TextureRect" parent="Scene/Props/Furniture2/Furniture/VendingMachine/Key" node_paths=PackedStringArray("input_listener", "camera_3d", "player_reference", "object_3d")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("13_746io")
+expand_mode = 1
+script = ExtResource("14_im412")
+input_listener = NodePath("../../../../../../../Scripts/Input Listener")
+action_name = "interact"
+keyboard = ExtResource("16_t5ewu")
+keyboard_pressed = ExtResource("16_t5ewu")
+keyboard_disabled = ExtResource("24_v3bi6")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
+xbox_disabled = ExtResource("24_v3bi6")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
+playstation_disabled = ExtResource("24_v3bi6")
+spatial = true
+camera_3d = NodePath("../../../../../../../Player/Head/Camera3D")
+player_reference = NodePath("../../../../../../../Player")
+object_3d = NodePath("..")
+visible_texture = ExtResource("13_746io")
+interactable_distance = 1.5
+visible_distance = 2.6
+
+[node name="VendingMachine" type="MeshInstance3D" parent="Scene/Props/Furniture2/Furniture/VendingMachine"]
+transform = Transform3D(0.832022, 0, 0.554744, 0, 1, 0, -0.554744, 0, 0.832022, 0.515635, -0.519218, -0.579581)
+material_override = ExtResource("38_oi6go")
+mesh = ExtResource("26_wu8jj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Scene/Props/Furniture2/Furniture/VendingMachine/VendingMachine"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Props/Furniture2/Furniture/VendingMachine/VendingMachine/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00234938, 1.01434, 0.0275022)
+shape = SubResource("BoxShape3D_rouh0")
 
 [node name="Furniture2" type="MeshInstance3D" parent="Scene/Props/Furniture2"]
 transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 0.573385, -0.0175783, -1.56791)
@@ -530,11 +759,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../../../../Player/Head/Camera3D")
@@ -591,11 +820,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../../../../Player/Head/Camera3D")
@@ -618,16 +847,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0090332, 0.386475, 0.313126
 shape = SubResource("BoxShape3D_t0li5")
 
 [node name="FurnitureDoor2" type="Node3D" parent="Scene/Props/Furniture2"]
-transform = Transform3D(0.998273, 0, -0.0587488, 0, 1, 0, 0.0587488, 0, 0.998273, 1.32812, 0.258579, 2.33732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01846, 0.411529, -8.76451)
 
-[node name="Indicator" type="Node3D" parent="Scene/Props/Furniture2/FurnitureDoor2" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "obj")]
+[node name="Indicator" type="Node3D" parent="Scene/Props/Furniture2/FurnitureDoor2" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "flags_manager", "obj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0650337, 0.758773, 1.04863)
 script = ExtResource("17_j1h1u")
 texture_rect_node = NodePath("InteractIndicator")
+flag_requirement = "HasMotelKey"
 player = NodePath("../../../../../Player")
 camera = NodePath("../../../../../Player/Head/Camera3D")
+flags_manager = NodePath("../../../../../Scripts/Flags")
 obj = NodePath("..")
-rotation_amount = -90.0
+rotation_amount = -135.0
 
 [node name="InteractIndicator" type="TextureRect" parent="Scene/Props/Furniture2/FurnitureDoor2/Indicator" node_paths=PackedStringArray("input_listener", "camera_3d", "player_reference", "object_3d")]
 anchors_preset = 8
@@ -648,11 +879,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../../../Player/Head/Camera3D")
@@ -663,7 +894,7 @@ interactable_distance = 1.5
 visible_distance = 2.6
 
 [node name="FurnitureDoor" type="MeshInstance3D" parent="Scene/Props/Furniture2/FurnitureDoor2"]
-transform = Transform3D(0.998027, 0, 0.0627908, 0, 1, 0, -0.0627908, 0, 0.998027, 0, -0.288654, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.288654, 0)
 material_override = ExtResource("18_gkta6")
 mesh = ExtResource("24_aqe51")
 skeleton = NodePath("../../..")
@@ -671,7 +902,7 @@ skeleton = NodePath("../../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Scene/Props/Furniture2/FurnitureDoor2/FurnitureDoor"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scene/Props/Furniture2/FurnitureDoor2/FurnitureDoor/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0090332, 0.386475, 0.313126)
+transform = Transform3D(0.999991, 0, -7.45058e-09, 0, 1, 0, 7.45058e-09, 0, 0.999991, 0.0090332, 1.00153, 0.568067)
 shape = SubResource("BoxShape3D_t0li5")
 
 [node name="Floor" type="StaticBody3D" parent="Scene"]
@@ -778,11 +1009,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../Player/Head/Camera3D")
@@ -847,10 +1078,6 @@ shape = SubResource("ConcavePolygonShape3D_1xsxe")
 transform = Transform3D(0.00859105, 0, -0.999885, 0, 1, 0, -0.982475, 0, -0.0087433, 17.2376, -0.0172119, 15.1483)
 mesh = ExtResource("41_lqeo7")
 
-[node name="MotelBuilding" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6022, -0.0175781, -4.41489)
-mesh = ExtResource("42_1wnpg")
-
 [node name="LowPolyCar" type="MeshInstance3D" parent="Scene"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.112, 0.382131, -25.8647)
 material_override = ExtResource("43_o4jcc")
@@ -892,7 +1119,7 @@ material_override = ExtResource("43_o4jcc")
 mesh = ExtResource("43_xvg5u")
 
 [node name="Fence2" type="Node3D" parent="Scene" node_paths=PackedStringArray("texture_rect_node")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 19.7446, -0.138396, 5.35443)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 38.5048, -0.138396, 0.491836)
 script = ExtResource("17_j1h1u")
 texture_rect_node = NodePath("FenceDoor/Indicator/InteractIndicator")
 
@@ -919,12 +1146,14 @@ mesh = ExtResource("21_vliym")
 skeleton = NodePath("../../Props/Furniture2/Furniture")
 surface_material_override/0 = ExtResource("40_4sk5u")
 
-[node name="Indicator" type="Node3D" parent="Scene/Fence2/FenceDoor" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "obj")]
+[node name="Indicator" type="Node3D" parent="Scene/Fence2/FenceDoor" node_paths=PackedStringArray("texture_rect_node", "player", "camera", "flags_manager", "obj")]
 transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0.0425234, 1.38104, 0.861732)
 script = ExtResource("17_j1h1u")
 texture_rect_node = NodePath("InteractIndicator")
+flag_requirement = "HasMotelKey"
 player = NodePath("../../../../Player")
 camera = NodePath("../../../../Player/Head/Camera3D")
+flags_manager = NodePath("../../../../Scripts/Flags")
 obj = NodePath("..")
 rotation_amount = -90.0
 
@@ -947,11 +1176,11 @@ action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
 keyboard_disabled = ExtResource("24_v3bi6")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
 xbox_disabled = ExtResource("24_v3bi6")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 playstation_disabled = ExtResource("24_v3bi6")
 spatial = true
 camera_3d = NodePath("../../../../../Player/Head/Camera3D")
@@ -962,77 +1191,77 @@ interactable_distance = 1.5
 visible_distance = 2.6
 
 [node name="Fence" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3771, -0.0175762, 16.4801)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.1373, -0.0175762, 11.6175)
 mesh = ExtResource("46_yv3pe")
 
 [node name="Wall" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.0333, -0.0175781, -23.8082)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.0333, -0.0175781, -35.6856)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall2" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 30.0173, -0.0175781, -23.8082)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 30.0173, -0.0175781, -35.6856)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall3" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.9176, -0.0175781, -23.8082)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.9176, -0.0175781, -35.6856)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall4" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -26.9694)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -38.8468)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall5" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -29.9814)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -41.8588)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall6" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -32.9019)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -44.7793)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall7" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -35.7348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -47.6122)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall8" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -38.6247)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -50.5021)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall9" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -41.5336)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.9176, -0.0175781, -53.411)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall10" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.6782, -0.0175781, -41.3966)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29.6782, -0.0175781, -53.274)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall11" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.8453, -0.0175781, -41.3966)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.8453, -0.0175781, -53.274)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall12" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9554, -0.0175781, -41.3966)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9554, -0.0175781, -53.274)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall13" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.0465, -0.0175781, -41.3966)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.0465, -0.0175781, -53.274)
 mesh = ExtResource("47_3bkah")
 
 [node name="Wall14" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.02, -0.0175781, -41.3966)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.02, -0.0175781, -53.274)
 mesh = ExtResource("47_3bkah")
 
 [node name="LowPolyCar5" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.0687, 0.256435, -39.5708)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.0687, 0.256435, -51.4482)
 material_override = ExtResource("43_o4jcc")
 mesh = ExtResource("43_xvg5u")
 
 [node name="LowPolyCar6" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.0687, 0.256435, -31.8578)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.0687, 0.256435, -43.7352)
 material_override = ExtResource("43_o4jcc")
 mesh = ExtResource("43_xvg5u")
 
 [node name="LowPolyCar7" type="MeshInstance3D" parent="Scene"]
-transform = Transform3D(0.764865, 0, -0.64419, 0, 1, 0, 0.64419, 0, 0.764865, 20.2677, 0.256435, -30.8535)
+transform = Transform3D(0.764865, 0, -0.64419, 0, 1, 0, 0.64419, 0, 0.764865, 20.2677, 0.256435, -42.7309)
 material_override = ExtResource("43_o4jcc")
 mesh = ExtResource("43_xvg5u")
 
@@ -1051,6 +1280,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/UI"]
+layout_mode = 0
+offset_left = 1086.0
+offset_top = 595.0
+offset_right = 1126.0
+offset_bottom = 618.0
+text = "12"
+
+[node name="Label2" type="Label" parent="Control/UI"]
+layout_mode = 0
+offset_left = 1109.0
+offset_top = 607.0
+offset_right = 1149.0
+offset_bottom = 630.0
+text = "12"
 
 [node name="Crosshair" type="TextureRect" parent="Control/UI"]
 layout_mode = 1
@@ -1130,10 +1375,10 @@ input_listener = NodePath("../../../../Scripts/Input Listener")
 action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 spatial = true
 camera_3d = NodePath("../../../../Player/Head/Camera3D")
 player_reference = NodePath("../../../../Player")
@@ -1161,10 +1406,10 @@ input_listener = NodePath("../../../../Scripts/Input Listener")
 action_name = "interact"
 keyboard = ExtResource("16_t5ewu")
 keyboard_pressed = ExtResource("16_t5ewu")
-xbox = ExtResource("18_8yg70")
-xbox_pressed = ExtResource("17_sbqgu")
-playstation = ExtResource("20_cph8l")
-playstation_pressed = ExtResource("19_ft2tr")
+xbox = ExtResource("15_pwh51")
+xbox_pressed = ExtResource("16_xwrca")
+playstation = ExtResource("27_ma6a6")
+playstation_pressed = ExtResource("26_rdcop")
 spatial = true
 camera_3d = NodePath("../../../../Player/Head/Camera3D")
 player_reference = NodePath("../../../../Player")
@@ -1228,6 +1473,75 @@ expand_mode = 1
 stretch_mode = 3
 script = ExtResource("27_nyfgn")
 action_name = "interact"
+
+[node name="Motel" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 38.3957, -0.0175781, -25.5121)
+mesh = ExtResource("58_l3y88")
+surface_material_override/0 = ExtResource("35_alnhp")
+surface_material_override/1 = ExtResource("18_gkta6")
+surface_material_override/2 = ExtResource("7_lnyux")
+surface_material_override/3 = ExtResource("43_o4jcc")
+surface_material_override/4 = ExtResource("7_lnyux")
+surface_material_override/5 = ExtResource("43_o4jcc")
+surface_material_override/6 = ExtResource("18_gkta6")
+surface_material_override/7 = ExtResource("35_alnhp")
+surface_material_override/8 = ExtResource("39_kojvj")
+surface_material_override/9 = ExtResource("34_80y4f")
+surface_material_override/10 = ExtResource("39_kojvj")
+surface_material_override/11 = ExtResource("40_4sk5u")
+surface_material_override/12 = ExtResource("18_gkta6")
+surface_material_override/13 = ExtResource("8_8f88a")
+surface_material_override/14 = ExtResource("40_4sk5u")
+surface_material_override/15 = ExtResource("7_lnyux")
+surface_material_override/16 = ExtResource("40_4sk5u")
+surface_material_override/17 = ExtResource("43_o4jcc")
+surface_material_override/18 = ExtResource("39_kojvj")
+surface_material_override/19 = ExtResource("18_gkta6")
+surface_material_override/20 = ExtResource("43_o4jcc")
+surface_material_override/21 = ExtResource("40_4sk5u")
+surface_material_override/22 = ExtResource("34_80y4f")
+surface_material_override/23 = ExtResource("35_alnhp")
+surface_material_override/24 = ExtResource("40_4sk5u")
+surface_material_override/25 = ExtResource("33_kkwha")
+surface_material_override/26 = ExtResource("18_gkta6")
+surface_material_override/27 = ExtResource("43_o4jcc")
+surface_material_override/28 = ExtResource("40_4sk5u")
+surface_material_override/29 = ExtResource("34_80y4f")
+surface_material_override/30 = ExtResource("18_gkta6")
+surface_material_override/31 = ExtResource("39_kojvj")
+surface_material_override/32 = ExtResource("18_gkta6")
+surface_material_override/33 = ExtResource("40_4sk5u")
+surface_material_override/34 = ExtResource("35_alnhp")
+surface_material_override/35 = ExtResource("34_80y4f")
+surface_material_override/37 = ExtResource("18_gkta6")
+surface_material_override/38 = ExtResource("35_alnhp")
+surface_material_override/39 = ExtResource("40_4sk5u")
+surface_material_override/40 = ExtResource("43_o4jcc")
+surface_material_override/41 = ExtResource("35_alnhp")
+surface_material_override/42 = ExtResource("40_4sk5u")
+surface_material_override/43 = ExtResource("34_80y4f")
+surface_material_override/44 = ExtResource("39_kojvj")
+surface_material_override/45 = ExtResource("18_gkta6")
+surface_material_override/46 = ExtResource("33_kkwha")
+
+[node name="Motel4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6463, 0.0768938, -10.4518)
+mesh = ExtResource("61_fe3p5")
+surface_material_override/0 = ExtResource("8_8f88a")
+surface_material_override/1 = ExtResource("18_gkta6")
+surface_material_override/2 = ExtResource("35_alnhp")
+surface_material_override/3 = ExtResource("18_gkta6")
+surface_material_override/4 = ExtResource("18_gkta6")
+surface_material_override/5 = ExtResource("43_o4jcc")
+surface_material_override/6 = ExtResource("7_lnyux")
+surface_material_override/7 = ExtResource("8_8f88a")
+surface_material_override/8 = ExtResource("18_gkta6")
+surface_material_override/9 = ExtResource("38_oi6go")
+surface_material_override/10 = ExtResource("18_gkta6")
+surface_material_override/11 = ExtResource("18_gkta6")
+surface_material_override/12 = ExtResource("18_gkta6")
+surface_material_override/13 = ExtResource("18_gkta6")
+surface_material_override/14 = ExtResource("40_4sk5u")
 
 [connection signal="body_entered" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="enter"]
 [connection signal="body_exited" from="Scene/TimeAnomaly/Trigger" to="Scene/TimeAnomaly/TimeChanger" method="exit"]

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://8j4ptap8jkv"]
+
+[ext_resource type="Texture2D" uid="uid://dxqyo8dackpna" path="res://Assets/Models/Props/moose.png" id="1_57r0y"]
+
+[resource]
+heightmap_enabled = true
+heightmap_scale = 16.0
+heightmap_texture = ExtResource("1_57r0y")

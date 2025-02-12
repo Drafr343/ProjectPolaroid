@@ -19,6 +19,7 @@ var direction = Vector3.ZERO
 @export var controllerSens = 2.0 # Sensibilidad del mando
 
 var crouching: bool
+var sprinting: bool
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -50,26 +51,32 @@ func _physics_process(delta):
 	# Crouching
 	if Input.is_action_just_pressed("crouch"):
 		crouching = !crouching
+		sprinting = false
+	if Input.is_action_just_pressed("sprint"):
+		sprinting = !sprinting
+		crouching = false
 	
 	if crouching:
 		currentSpeed = crouchingSpeed
-		head.position.y = lerp(head.position.y, 1.0, delta * 8)
+		head.position.y = lerp(head.position.y, 0.9, delta * 8)
 		standingCollision.disabled = true
 		crouchingCollision.disabled = false
 	elif !head_raycast.is_colliding():
-		head.position.y = lerp(head.position.y, 1.65, delta * 8)
+		head.position.y = lerp(head.position.y, 1.5, delta * 8)
 		standingCollision.disabled = false
 		crouchingCollision.disabled = true
 	
 	# Sprinting
-	if Input.is_action_pressed("sprint"):
+	if sprinting:
 		currentSpeed = sprintingSpeed
 	else:
 		currentSpeed = walkingSpeed
+	if abs(velocity.x + velocity.z) <= 0.2:
+		sprinting = false
 
 	# Jump
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = jumpVelocity
+	#if Input.is_action_just_pressed("jump") and is_on_floor():
+	#	velocity.y = jumpVelocity
 
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")

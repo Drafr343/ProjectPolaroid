@@ -5,10 +5,14 @@ extends Node3D
 @export var detection_radius: float = 3
 @export var screen_distance: float = 200.0  # Distancia máxima desde el centro de la pantalla
 @export var function_name: String
+@export var flag_requirement: String
 
 # Referencias a nodos
 @export var texture_rect_node: TextureRect
 @export var flags_manager: Node
+@export var spawner: bool = false
+@export var target_node: Node3D
+@export var object: Node3D
 
 # Referencia al jugador y cámara
 @export var player: CharacterBody3D
@@ -38,7 +42,23 @@ func _process(delta):
 	if distance_to_player <= detection_radius and distance_to_screen_center <= screen_distance and object_on_screen:
 		# Verificar si se presiona la acción cuando está dentro del rango
 		if Input.is_action_just_pressed(action_name):
-			texture_rect_node.queue_free()  # Eliminar el TextureRect
 			if flags_manager and flags_manager.has_method(function_name):
-				flags_manager.call(function_name) #Llama la funcion
-			queue_free()  # Eliminar este objeto
+				if flag_requirement != null and flags_manager.has_method(flag_requirement):
+					if flags_manager.call(flag_requirement) == true:
+						flags_manager.call(function_name) #Llama la funcion
+						if spawner:
+							spawn_object()
+				else:
+					flags_manager.call(function_name) #Llama la funcion
+					if spawner:
+						spawn_object()
+
+func spawn_object():
+	# Make the object a child of the target node
+	object.get_parent().remove_child(object)
+	target_node.add_child(object)
+
+	# Reset its position relative to the target node
+	object.transform.origin = Vector3.ZERO
+	print("Moved object: ", object.name, " to position: ", target_node.global_transform.origin)
+	return
